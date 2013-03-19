@@ -1,0 +1,160 @@
+#: planetsuse/code.html:8
+msgid "_DATE_FORMAT_"
+msgstr ""
+
+#: planetsuse/code.html:9
+msgid "read more"
+msgstr ""
+
+#: planetsuse/planet_template.html:8
+msgid "Aggregation of the blogs of openSUSE contributors"
+msgstr ""
+
+#: planetsuse/planet_template.html:28 planetsuse/planet_template.html:33
+msgid "Subscriptions"
+msgstr ""
+
+#: planetsuse/planet_template.html:29
+msgid "Subscriptions (all languages)"
+msgstr ""
+
+#: planetsuse/planet_template.html:31 planetsuse/planet_template.html:32 planetsuse/planet_template.html:83
+msgid "all languages"
+msgstr ""
+
+#: planetsuse/planet_template.html:42
+msgid "Downloads"
+msgstr ""
+
+#: planetsuse/planet_template.html:43
+msgid "Support"
+msgstr ""
+
+#: planetsuse/planet_template.html:44
+msgid "Community"
+msgstr ""
+
+#: planetsuse/planet_template.html:45
+msgid "Development"
+msgstr ""
+
+#: planetsuse/planet_template.html:52 planetsuse/planet_template.html:89
+msgid "Overview"
+msgstr ""
+
+#: planetsuse/planet_template.html:68 planetsuse/feedlist_template.html:53
+msgid "Welcome to openSUSE Chinese Community"
+msgstr ""
+
+#: planetsuse/planet_template.html:70
+msgid "This is a feed aggregator that collects what <a href=\"https://www.opensuse.org\">openSUSE</a> contributors are writing in their respective blogs."
+msgstr ""
+
+#: planetsuse/planet_template.html:75 planetsuse/feedlist_template.html:60
+msgid "To have your blog added to this aggregator, please contact <a href=\"mailto:marguerite@opensuse.org?subject=请求加入openSUSE聚合列表\">marguerite</a>."
+msgstr ""
+
+#: planetsuse/planet_template.html:79
+msgid "Languages:"
+msgstr ""
+
+#: planetsuse/planet_template.html:81
+msgid "Simplified Chinese"
+msgstr ""
+
+#: planetsuse/planet_template.html:82
+msgid "Traditional Chinese"
+msgstr ""
+
+#: planetsuse/planet_template.html:86 planetsuse/feedlist_template.html:64
+msgid "Actions:"
+msgstr ""
+
+#: planetsuse/planet_template.html:88
+msgid "Keyboard shortcuts"
+msgstr ""
+
+#: planetsuse/planet_template.html:90
+msgid "Feed list"
+msgstr ""
+
+#: planetsuse/planet_template.html:93 planetsuse/feedlist_template.html:71
+msgid "Metadata:"
+msgstr ""
+
+#: planetsuse/planet_template.html:103
+msgid "Keyboard shortcuts:"
+msgstr ""
+
+#: planetsuse/planet_template.html:105
+msgid "toggle overview"
+msgstr ""
+
+#: planetsuse/planet_template.html:106
+msgid "toggle help (this)"
+msgstr ""
+
+#: planetsuse/planet_template.html:107
+msgid "next post"
+msgstr ""
+
+#: planetsuse/planet_template.html:108
+msgid "previous post"
+msgstr ""
+
+#: planetsuse/planet_template.html:109
+msgid "next day"
+msgstr ""
+
+#: planetsuse/planet_template.html:110
+msgid "previous day"
+msgstr ""
+
+#: planetsuse/planet_template.html:111
+msgid "go to top"
+msgstr ""
+
+#: planetsuse/planet_template.html:112
+msgid "cancel"
+msgstr ""
+
+#: planetsuse/planet_template.html:114
+msgid "Note that you may use those keys with or without pressing the <span class=\"key\">alt</span> key."
+msgstr ""
+
+#: planetsuse/planet_template.html:145
+msgid "Current blog entries"
+msgstr ""
+
+#: planetsuse/planet_template.html:147
+msgid "Older blog entries"
+msgstr ""
+
+#: planetsuse/planet_template.html:161 planetsuse/feedlist_template.html:121
+msgid "Marguerite Su and the openSUSE Chinese Community."
+msgstr ""
+
+#: planetsuse/planet_template.html:164 planetsuse/feedlist_template.html:124
+msgid "This site is not an official openSUSE website, and is not in any way affiliated with or endorsed by SUSE Linux GmbH or Novell."
+msgstr ""
+
+#: planetsuse/planet_template.html:169 planetsuse/feedlist_template.html:129
+msgid "openSUSE and SUSE are trademarks of Novell, Inc. in the United States and other countries."
+msgstr ""
+
+#: planetsuse/feedlist_template.html:55
+msgid "This page contains the list of all the <a href=\"http://www.opensuse.org\">openSUSE</a> contributors who are aggregated on <a href=\"./\">openSUSE Chinese Community</a>."
+msgstr ""
+
+#: planetsuse/feedlist_template.html:66
+msgid "Back to openSUSE Chinese Community"
+msgstr ""
+
+#: planetsuse/feedlist_template.html:68
+msgid "Show all feeds"
+msgstr ""
+
+#: planetsuse/feedlist_template.html:81
+msgid "Aggregated feeds:"
+msgstr ""
+

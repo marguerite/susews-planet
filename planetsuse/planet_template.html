@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" {% if lang %}xml:lang="{{ lang }}" lang="{{ lang }}" {% else %}xml:lang="en" lang="en"{% endif %}>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  {%- if lang -%}
+  <meta http-equiv="content-language" content="{{ lang }}"/>
+  {%- endif -%}
+  <meta name="description" content="{% trans %}Aggregation of the blogs of openSUSE contributors{% endtrans %}"/>
+  <meta name="keywords" content="opensuse, linux"/>
+  <link rel="stylesheet" href="https://static.opensuse.org/themes/bento/css/style.css" type="text/css" media="screen" title="All" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" title="All" charset="utf-8" />
+  <script src="https://static.opensuse.org/themes/bento/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  {%- if lang -%}
+  <script src="https://static.opensuse.org/themes/bento/js/l10n/global-navigation-data-{{ lang }}.js" type="text/javascript" charset="utf-8"></script>
+  {%- else -%}
+  <script src="https://static.opensuse.org/themes/bento/js/l10n/global-navigation-data-en_US.js" type="text/javascript" charset="utf-8"></script>
+  {%- endif -%}
+  <script src="https://static.opensuse.org/themes/bento/js/global-navigation.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/jquery.scrollTo.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/navigation.min.js"      type="text/javascript" charset="utf-8"></script>
+
+  <title>openSUSE 中文部落格聚合{% if lang %} ({{ lang }}){% endif %}</title>
+  {%- if lang -%}
+  <link rel="alternate"     type="application/rss+xml" title="openSUSE 中文部落格聚合 ({{ lang }})" href="rss20.xml" />
+  <link rel="alternate"     type="application/rss+xml" title="openSUSE 中文部落格聚合 (简繁)" href="../global/rss20.xml" />
+  <link rel="meta"          type="application/rdf+xml" title="FOAF ({{ lang }})" href="foafroll.xml" />
+  <link rel="meta"          type="application/rdf+xml" title="FOAF (简繁)" href="../global/foafroll.xml" />
+  <link rel="subscriptions" type="text/x-opml"         title="{% trans %}Subscriptions{% endtrans %} ({{ lang }})" href="opml.xml" />
+  <link rel="subscriptions" type="text/x-opml"         title="{% trans %}Subscriptions (all languages){% endtrans %}" href="../global/opml.xml" />
+  {%- else -%}
+  <link rel="alternate"     type="application/rss+xml" title="openSUSE 中文部落格聚合 ({% trans %}all languages{% endtrans %})" href="rss20.xml" />
+  <link rel="meta"          type="application/rdf+xml" title="FOAF ({% trans %}all languages{% endtrans %})" href="foafroll.xml" />
+  <link rel="subscriptions" type="text/x-opml"         title="{% trans %}Subscriptions{% endtrans %}" href="opml.xml" />
+  {%- endif -%}
+</head>
+<body>
+  <!-- Start: Header -->
+  <div id="header">
+    <div id="header-content" class="container_12">
+      <a id="header-logo" href="http://community.suse.ws/"><img src="../images/header-logo.png" width="46" height="26" alt="Header Logo" /></a>
+      <ul id="global-navigation">
+        <li id="item-downloads"><a href="https://opensuse.org/sitemap#downloads">{% trans %}Downloads{% endtrans %}</a></li>
+        <li id="item-support"><a href="https://opensuse.org/sitemap#support">{% trans %}Support{% endtrans %}</a></li>
+        <li id="item-community"><a href="https://opensuse.org/sitemap#community">{% trans %}Community{% endtrans %}</a></li>
+        <li id="item-development"><a href="https://opensuse.org/sitemap#development">{% trans %}Development{% endtrans %}</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- End: Header -->
+
+  <div id="_A67JAZHE9192_planet_opensuse_overview" style="display: none;">
+    <h4>{% trans %}Overview{% endtrans %}</h4>
+    <ul>
+      {%- for d in items -%}
+      <li class="_A67JAZHE9192_planet_opensuse_overview-day"><a{% if loop.first %} id="_A67JAZHE9192_planet_opensuse_overview-day-first"{% endif %} href="#day-item-{{ loop.index }}">{{ d.dow }} {{ d.month }} {{ d.day }}, {{ d.year }}</a></li>
+      {%- for a in d.articles -%}
+      <li><a href="#post-item-{{ a.index }}">{{ a.name }}: {{ a.title_no_link }}</a></li>
+      {%- endfor -%}
+      {%- endfor -%}
+    </ul>
+  </div> <!-- #overview -->
+
+  <div id="_A67JAZHE9192_planet_opensuse_planet">
+
+  <div id="_A67JAZHE9192_planet_opensuse_main">
+
+  <div id="_A67JAZHE9192_planet_opensuse_intro">
+    <h3>{% trans %}Welcome to openSUSE Chinese Community{% endtrans %}</h3>
+    <p>
+        {%- trans -%}
+        This is a feed aggregator that collects what <a href="https://www.opensuse.org">openSUSE</a> contributors are writing in their respective blogs.
+        {%- endtrans -%}
+    </p>
+    <p>
+        {%- trans -%}
+        To have your blog added to this aggregator, please contact <a href="mailto:marguerite@opensuse.org?subject=请求加入openSUSE聚合列表">marguerite</a>.
+        {%- endtrans -%}
+    </p>
+    <h4 id="lang-header" class="menu-header">{% trans %}Languages:{% endtrans %}</h4>
+    <ul id="lang-menu" class="menu">
+      <li><a href="../cn" id="lang-menu-cn" class="lang-cn">{% trans %}Simplified Chinese{% endtrans %}</a></li>
+      <li><a href="../tw" id="lang-menu-tw" class="lang-tw">{% trans %}Traditional Chinese{% endtrans %}</a></li>
+      <li><a href="../global" id="lang-menu-all" class="lang-all">{% trans %}all languages{% endtrans %}</a></li>
+    </ul>
+
+    <h4 id="_A67JAZHE9192_planet_opensuse_actions-header" class="menu-header">{% trans %}Actions:{% endtrans %}</h4>
+    <ul id="_A67JAZHE9192_planet_opensuse_actions-menu" class="menu">
+      <li><a href="#" id="_A67JAZHE9192_planet_opensuse_help-trigger">{% trans %}Keyboard shortcuts{% endtrans %}</a></li>
+      <li><a href="#" id="_A67JAZHE9192_planet_opensuse_overview-trigger">{% trans %}Overview{% endtrans %}</a></li>
+      <li><a href="feedlist.html" id="_A67JAZHE9192_planet_opensuse_feeds-trigger">{% trans %}Feed list{% endtrans %}</a></li>
+    </ul>
+
+    <h4 id="xml-header" class="menu-header">{% trans %}Metadata:{% endtrans %}</h4>
+    <ul id="xml-menu" class="menu">
+      <li><a href="rss20.xml"    type="application/rss+xml" rel="alternate">RSS</a></li>
+      <li><a href="opml.xml"     type="text/x-opml"         rel="meta">OPML</a></li>
+      <li><a href="foafroll.xml" type="application/rdf+xml" rel="subscriptions">FOAF</a></li>
+    </ul>
+  </div> <!-- #intro -->
+  <div class="clear"></div>
+
+  <div id="_A67JAZHE9192_planet_opensuse_help" style="display: none;">
+    <h4>{% trans %}Keyboard shortcuts:{% endtrans %}</h4>
+    <dl>
+      <dt>o</dt><dd>{% trans %}toggle overview{% endtrans %}</dd>
+      <dt>h</dt><dd>{% trans %}toggle help (this){% endtrans %}</dd>
+      <dt>j</dt><dd>{% trans %}next post{% endtrans %}</dd>
+      <dt>k</dt><dd>{% trans %}previous post{% endtrans %}</dd>
+      <dt>d</dt><dd>{% trans %}next day{% endtrans %}</dd>
+      <dt>u</dt><dd>{% trans %}previous day{% endtrans %}</dd>
+      <dt>t</dt><dd>{% trans %}go to top{% endtrans %}</dd>
+      <dt>esc</dt><dd>{% trans %}cancel{% endtrans %}</dd>
+    </dl>
+    <p>{% trans %}Note that you may use those keys with or without pressing the <span class="key">alt</span> key.{% endtrans %}</p>
+  </div> <!-- #help -->
+
+  <!-- Start: Main Content Area -->
+  <div id="_A67JAZHE9192_planet_opensuse_content" class="content-wrapper">
+    {% for day in items %}
+    <hr class="textonly"/>
+    <div class="day day-{{ day.day }}"><a id="day-item-{{ loop.index }}" class="day-item-anchor" name="day-item-{{ loop.index }}"></a>
+      <h2><span class="day-day">{{ day.dow|capitalize }}</span><br/><span class="day-date">{{ day.when }}</span></h2>
+      {% for a in day.articles %}
+      <hr class="textonly"/>
+      <div id="item-{{ a.hash }}" class="entrygroup item feed-{{ a.feed_hash }} box box-shadow clearfix">
+        <div class="box-header">
+          <div class="post-header">
+            <h3{% if a.item_lang %} class="lang-{{ a.item_lang }} lang"{% endif %}><a class="blogurl" href="{{ a.blogurl }}">{{ a.name }}</a>: <a class="posttitle" href="{{ a.url }} ">{{ a.title_no_link }}</a></h3>
+            <h4 class="date"><span class="textonly">@&nbsp;</span>{{ a.time }} UTC
+              {%- if a.member  %}<span class="member">member</span>{% endif -%}
+              {%- if a.gsoc    %}<span class="gsoc">gsoc</span>{% endif -%}
+            </h4>
+          </div>
+        </div>
+        <div class="entry">
+          {% if a.face %}<div class="author"><img alt="face" class="face" src="{{ a.face }}"/></div>{% endif %}
+          <div class="blogcontent">{{ a.description }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+
+    {%- if old -%}
+    <p id="_A67JAZHE9192_planet_opensuse_current-entries"><span class="textonly">&lt;-&nbsp;</span><a href="./">{% trans %}Current blog entries{% endtrans %}</a></p>
+    {%- else -%}
+    <p id="_A67JAZHE9192_planet_opensuse_old-entries"><a href="old.html">{% trans %}Older blog entries{% endtrans %}</a><span class="textonly">&nbsp;-&gt;</span></p>
+    {%- endif -%}
+  </div>
+  <!-- End: Main Content Area -->
+  </div>  <!-- #main -->
+
+  <!-- Note: this clears floating, set in previous elements -->
+  <div class="clear"></div>
+  <!-- Start: Footer -->
+  <div id="_A67JAZHE9192_planet_opensuse_footer">
+    <div id="_A67JAZHE9192_planet_opensuse_footer-content" class="clear-block">
+    </div>
+    <div id="_A67JAZHE9192_planet_opensuse_footer-legal" class="border-top">
+      <p>
+        &copy; 2013 {% trans %}Marguerite Su and the openSUSE Chinese Community.{% endtrans %}
+      </p>
+      <p>
+        {%- trans -%}
+        This site is not an official openSUSE website, and is not in any way affiliated with or endorsed by SUSE Linux GmbH or Novell.
+        {%- endtrans -%}
+      </p>
+      <p>
+        {%- trans -%}
+        openSUSE and SUSE are trademarks of Novell, Inc. in the United States and other countries.
+        {%- endtrans -%}
+      </p>
+    </div>
+  </div>
+  <!-- End: Footer -->
+
+</div> <!-- #planet -->
+</body>
+</html>
+<!-- vim: set sw=2 ts=2 et ai:
+-->

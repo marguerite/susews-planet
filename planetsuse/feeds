@@ -1,0 +1,11 @@
+feed 15m http://example.com/feed/
+	define_name <Your Full Name>
+	define_nick <Your nick>
+	define_face <Your hackergotchi>
+	define_lang cn
+	define_irc  <Your IRC>
+	define_member 0
+    
+    
+
+
